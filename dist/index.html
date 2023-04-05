@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Today's To Do</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
 <body>
-    <h1>To Do List!</h1>
-    <div class="div-items">
-        <ul class="ul-items"></ul>
+    <div class="fullContainer">
+        <div class="div-item">
+            <h1 class="h1-text">Today's To Do</h1><span class="bt">↻</span>
+        </div>
+        <div class="div-items">
+            <div class="div-item">
+                <input class="add-item" type="text" placeholder="Add to your list..."><span class="bt">↵</span>
+            </div>
+            <ul class="ul-items"></ul>
+            <div class="div-item clean">
+                <p class="clean-text">Clear all completed</p>
+            </div>
+        </div>
     </div>
 </body>
 
