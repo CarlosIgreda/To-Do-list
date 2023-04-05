@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
 body {
-    background-color: steelblue;
+  background-color: #f6f6f6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fullContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.h1-text {
+  font-size: 1.1rem;
+  color: dimgray;
+}
+
+.div-item {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid lightgray;
+  padding: 1rem;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.151);
+}
+
+.ul-items {
+  list-style: none;
+}
+
+.li-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-item {
+  border: none;
+  font-style: italic;
+}
+
+.bt {
+  cursor: pointer;
+}
+
+.drag {
+  cursor: move;
+  caret-color: black;
+}
+
+.clean {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.151);
+}
+
+.clean-text {
+  color: gray;
+  cursor: pointer;
+}
+
+.clean-text:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.add-item:focus {
+  outline: none;
+}
+
+.span-text:focus {
+  outline: none;
 }
