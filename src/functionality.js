@@ -8,7 +8,7 @@ export const addTask = (description, tasks) => {
   const task = {
     description,
     completed: false,
-    index: tasks.length,
+    index: tasks.length + 1,
   };
   tasks.push(task);
   saveTasks(tasks);
