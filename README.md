@@ -20,7 +20,7 @@
 
 # 📖 Awesome books <a name="about-project"></a>
 
-In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
+In this project, I will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and my application will be completed.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,6 +59,7 @@ In this project, I will build a simple HTML list of To Do tasks. The list will b
 - **Use proper ES6 syntax**
 - **Use npm as software packages system**
 - **Use webpack to bundle JavaScript**
+- **Use ES6 modules to write modular JavaScript**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +104,6 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add & remove functionality**
 - [ ] **Interactive list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
