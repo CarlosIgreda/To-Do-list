@@ -6,6 +6,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     functionality: './src/functionality.js',
+    status: './src/status.js',
+    save: './src/save.js',
   },
   devtool: 'inline-source-map',
   devServer: {
