@@ -20,7 +20,7 @@
 
 # 📖 Awesome books <a name="about-project"></a>
 
-In this project, I will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and my application will be completed.
+In this project, I will add some functionality to my application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -104,7 +104,8 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Interactive list**
+- [ ] **Dragging items**
+- [ ] **Frameworks**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
