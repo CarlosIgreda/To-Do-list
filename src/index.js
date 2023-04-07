@@ -1,7 +1,7 @@
 import './styles.css';
-import {
-  saveTasks, addTask, deleteTask, editTask,
-} from './functionality.js';
+import { addTask, deleteTaskByIndex, editTask } from './functionality.js';
+import saveTasks from './save.js';
+import { addCheckboxEventListener, handlerClearText } from './status.js';
 
 // Get the task list from local storage or initialize it to an empty array
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -10,9 +10,10 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 const ul = document.querySelector('.ul-items');
 const addInput = document.querySelector('.add-item');
 const enter = document.querySelector('.enter');
+const clearText = document.querySelector('.clear-text');
 
 // Define a function to render the tasks in the UI
-const renderTasks = () => {
+const renderTasks = (tasks) => {
   ul.innerHTML = '';
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
@@ -29,6 +30,7 @@ const renderTasks = () => {
     button.textContent = '፧';
     button.setAttribute('class', 'bt button-item');
     trash.setAttribute('class', 'bt trash-icon');
+    trash.dataset.index = index;
     trashDrag.setAttribute('class', 'trash-drag');
     const divItem = document.createElement('div');
     divItem.setAttribute('class', 'div-item');
@@ -39,12 +41,9 @@ const renderTasks = () => {
     divItem.appendChild(li);
     divItem.appendChild(trashDrag);
     ul.appendChild(divItem);
+
     // Add event listeners for the checkbox, input and buttons
-    checkbox.addEventListener('change', () => {
-      task.completed = checkbox.checked;
-      input.classList.toggle('activated');
-      saveTasks(tasks);
-    });
+    addCheckboxEventListener(checkbox, task, input, tasks);
 
     input.addEventListener('click', () => {
       divItem.style.backgroundColor = 'lightgoldenrodyellow';
@@ -53,58 +52,52 @@ const renderTasks = () => {
       trash.style.display = 'block';
     });
 
-    trash.addEventListener('click', () => {
-      deleteTask(index, tasks);
-      renderTasks();
-    });
-
-    input.addEventListener('blur', () => {
-      setTimeout(() => {
-        editTask(index, input.value, tasks);
-        divItem.style.backgroundColor = '#fff';
-        input.style.backgroundColor = '#fff';
-        button.style.display = 'block';
-        trash.style.display = 'none';
-      }, 125);
+    trash.addEventListener('click', (event) => {
+      const { index } = event.target.dataset;
+      tasks = deleteTaskByIndex(index, tasks);
+      saveTasks(tasks);
+      renderTasks(tasks);
     });
 
     input.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && input.value) {
-        editTask(index, input.value, tasks);
+        tasks = editTask(index, input.value, tasks);
+        saveTasks(tasks);
         divItem.style.backgroundColor = '#fff';
         input.style.backgroundColor = '#fff';
         button.style.display = 'block';
         trash.style.display = 'none';
       }
     });
+
+    if (task.completed === true) {
+      input.classList.toggle('activated');
+    }
   });
 };
 
 // Render the initial tasks
-renderTasks();
+renderTasks(tasks);
 
 // Add event listener for adding a new task
 addInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' && addInput.value) {
-    addTask(addInput.value, tasks);
+    tasks = addTask(addInput.value, tasks);
+    saveTasks(tasks);
     addInput.value = '';
-    renderTasks();
+    renderTasks(tasks);
   }
 });
 
 enter.addEventListener('click', () => {
-  addTask(addInput.value, tasks);
+  tasks = addTask(addInput.value, tasks);
+  saveTasks(tasks);
   addInput.value = '';
-  renderTasks();
+  renderTasks(tasks);
 });
 
 // Add event listener for clearing completed tasks
-const clearText = document.querySelector('.clear-text');
 clearText.addEventListener('click', () => {
-  tasks = tasks.filter((task) => !task.completed);
-  tasks.forEach((task, i) => {
-    task.index = i;
-  });
-  saveTasks(tasks);
-  renderTasks();
+  tasks = handlerClearText(tasks);
+  renderTasks(tasks);
 });

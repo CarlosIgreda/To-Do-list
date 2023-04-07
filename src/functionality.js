@@ -1,8 +1,3 @@
-// Define a function to save the tasks in local storage
-export const saveTasks = (tasks) => {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-};
-
 // Define the functions for adding, deleting and editing tasks
 export const addTask = (description, tasks) => {
   const task = {
@@ -11,19 +6,18 @@ export const addTask = (description, tasks) => {
     index: tasks.length + 1,
   };
   tasks.push(task);
-  saveTasks(tasks);
-  return task;
+  return tasks;
 };
 
-export const deleteTask = (index, tasks) => {
+export const deleteTaskByIndex = (index, tasks) => {
   tasks.splice(index, 1);
   tasks.forEach((task, i) => {
-    task.index = i;
+    task.index = i + 1;
   });
-  saveTasks(tasks);
+  return tasks;
 };
 
 export const editTask = (index, description, tasks) => {
   tasks[index].description = description;
-  saveTasks(tasks);
+  return tasks;
 };
