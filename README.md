@@ -65,7 +65,7 @@ In this project, I will add some functionality to my application to make it inte
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://carlosigreda.github.io)
+- [Live Demo Link](https://carlosigreda.github.io/To-Do-list/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
