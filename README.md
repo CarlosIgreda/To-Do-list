@@ -18,7 +18,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Awesome books <a name="about-project"></a>
+# 📖 To Do list <a name="about-project"></a>
 
 In this project, I will add some functionality to my application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
