@@ -10,7 +10,7 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
-- [👥 Author](#author)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -20,7 +20,7 @@
 
 # 📖 To Do list <a name="about-project"></a>
 
-In this project, I will add some functionality to my application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
+In this project I will write unit tests for the To Do list application. The testing project has been divided into two parts. In part 1 I will test functions responsible for adding and deleting list items. In part 2 I will test the status and content updates as well as the order re-position of items in the list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,6 +60,7 @@ In this project, I will add some functionality to my application to make it inte
 - **Use npm as software packages system**
 - **Use webpack to bundle JavaScript**
 - **Use ES6 modules to write modular JavaScript**
+- **Write unit tests for a JavaScript app.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +94,7 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="authors"></a>
 
 **Carlos Igreda**
 - GitHub: [@CarlosIgreda](https://github.com/CarlosIgreda)
@@ -110,6 +111,7 @@ Clone this repository to your desired folder:
 
 - [ ] **Dragging items**
 - [ ] **Frameworks**
+- [ ] **Test the status with jest**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
