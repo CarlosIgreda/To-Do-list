@@ -604,6 +604,8 @@
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jsdom": "^21.1.1",
     "style-loader": "^3.3.2",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
