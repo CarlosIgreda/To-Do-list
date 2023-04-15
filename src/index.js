@@ -7,17 +7,17 @@ import { addCheckboxEventListener, handlerClearText } from './status.js';
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // Select the necessary HTML elements
-const ul = document.querySelector('.ul-items');
 const addInput = document.querySelector('.add-item');
 const enter = document.querySelector('.enter');
 const clearText = document.querySelector('.clear-text');
 
 // Define a function to render the tasks in the UI
 const renderTasks = (tasks) => {
+  const ul = document.querySelector('.ul-items');
   ul.innerHTML = '';
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
-    li.setAttribute('class', 'li-item');
+    li.setAttribute('class', 'li-item df ai');
     const checkbox = document.createElement('input');
     const input = document.createElement('input');
     input.setAttribute('class', 'input-text');
@@ -33,7 +33,7 @@ const renderTasks = (tasks) => {
     trash.dataset.index = index;
     trashDrag.setAttribute('class', 'trash-drag');
     const divItem = document.createElement('div');
-    divItem.setAttribute('class', 'div-item');
+    divItem.setAttribute('class', 'div-item df');
     li.appendChild(checkbox);
     li.appendChild(input);
     trashDrag.appendChild(trash);

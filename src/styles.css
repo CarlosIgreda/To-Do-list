@@ -14,9 +14,7 @@ body {
 }
 
 .fullContainer {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 5rem;
 }
 
@@ -27,9 +25,7 @@ body {
 
 .div-item {
   width: 25rem;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #fff;
   border-top: 1px solid lightgray;
   padding: 1rem;
@@ -42,9 +38,11 @@ body {
   list-style: none;
 }
 
-.li-item {
-  display: flex;
+.ai {
   align-items: center;
+}
+
+.li-item {
   gap: 0.5rem;
 }
 
@@ -65,9 +63,12 @@ body {
   caret-color: black;
 }
 
+.df {
+  display: flex;
+}
+
 .clean {
   background-color: #f6f6f6;
-  display: flex;
   justify-content: center;
   border-bottom: 1px solid lightgray;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.151);
