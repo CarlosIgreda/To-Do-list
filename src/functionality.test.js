@@ -1,4 +1,4 @@
-import { addTask, deleteTaskByIndex } from './functionality.js';
+import { addTask, deleteTaskByIndex, editTask } from './functionality.js';
 
 describe('Add item', () => {
   test('should add a new task to the tasks array', () => {
@@ -36,5 +36,24 @@ describe('Delete item', () => {
       });
     const result = deleteTaskByIndex(1, tasks);
     expect(result).toEqual(expected);
+  });
+});
+
+describe('Edit item', () => {
+  test('should edit a selected task from a tasks array', () => {
+    const tasks = [
+      {
+        description: 'Task 1',
+        completed: false,
+        index: 1,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 2,
+      }];
+    tasks[1].description = 'Task 2 updated';
+    const result = editTask(1, 'Task 2 updated', tasks);
+    expect(result).toEqual(tasks);
   });
 });
