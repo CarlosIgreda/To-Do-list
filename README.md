@@ -104,6 +104,7 @@ Clone this repository to your desired folder:
 **Javier Vargas**
 - GitHub: [@MotionLize](https://github.com/MotionLize)
 - LinkedIn: [javier-vargas-valdes-41144884](https://cl.linkedin.com/in/javier-vargas-valdes-41144884)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
