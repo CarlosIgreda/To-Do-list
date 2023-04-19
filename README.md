@@ -99,12 +99,7 @@ Clone this repository to your desired folder:
 **Carlos Igreda**
 - GitHub: [@CarlosIgreda](https://github.com/CarlosIgreda)
 - Twitter: [@carlosigreda](https://twitter.com/carlosigreda)
-- LinkedIn: [carlos-jesús-igreda-rivas-323763116](https://www.linkedin.com/in/carlos-jes%C3%BAs-igreda-rivas-323763116/)
-
-**Abiola Arobieke**
-- GitHub: [@abiola-arobieke](https://github.com/abiola-arobieke)
-
-
+- LinkedIn: [carlos-jesús-igreda-rivas-323763116](https://www.linkedin.com/in/carlosigreda/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
