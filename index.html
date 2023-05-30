@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's To Do</title>
+    <link rel="stylesheet" href="./styles.css">
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="functionality.bundle.js"></script><script defer src="status.bundle.js"></script><script defer src="save.bundle.js"></script></head>
+
+<body>
+    <section class="fullContainer df ai">
+        <div class="div-item df">
+            <h1 class="h1-text">Today's To Do</h1><button type="button" class="bt refresh">↻</button>
+        </div>
+        <div class="div-items">
+            <div class="div-item df">
+                <input class="add-item" type="text" placeholder="Add to your list..."><button type="button" class="bt enter">↵</button>
+            </div>
+            <ul class="ul-items"></ul>
+            <div class="div-item clean df ai">
+                <p class="clear-text">Clear all completed</p>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./functionality.js"></script>
+    <script type="module" src="./status.js"></script>
+    <script type="module" src="./save.js"></script>
+</body>
+
+</html>
